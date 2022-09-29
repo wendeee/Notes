@@ -17,9 +17,11 @@ async function getAllNotes(req, res){
 }
 
 async function addNote(req, res){
+   
     const noteInfo = req.body;
     try{
         const note = await NoteModel.create(noteInfo)
+        note.save()
         res.status(201).json({
             message: 'Note added successfully',
             data: note

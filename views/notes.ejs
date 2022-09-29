@@ -1,0 +1,31 @@
+<%- include('partials/header'); -%>
+
+
+    <!-- main section -->
+    <main>
+        <form name="item" action="/" method="post">
+            <div class="form-group">
+                <input type="text" name="noteTitle" id="title" placeholder="Title" autocomplete="off">
+                <input type="text" name="noteContent" id="description" placeholder="Take a note..." autofocus autocomplete="off">
+                <button class="btn" type="submit">Add note</button>
+            </div>
+            
+        </form>
+       <div class="card-container">
+
+      
+      
+            <div class="card">
+                <div class="header">
+                    <h3><%= newContent.title %></h3>
+                </div>
+                <div class="body">
+                    <%= newContent.description.slice(0, 50) + '...' %>
+                </div>
+            </div>
+      
+    </div>
+    </main>
+    <script src="/script.js"></script>
+</body>
+</html>
