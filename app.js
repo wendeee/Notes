@@ -5,6 +5,7 @@ const noteRouter = require('./router/notes')
 const noteController = require('./controller/notes')
 const bodyParser = require('body-parser')
 const Notes = require('./model/note');
+const viewsRouter = require('./router/viewsRoute')
 // const note = require('./model/note');
 const PORT = process.env.PORT
 let newNote = ""
@@ -25,15 +26,13 @@ app.use(express.json())
 app.use(express.static('public'))
 app.use('/api/v1/notes', noteRouter )
 app.use(bodyParser.urlencoded({extended: true}))
-
-app.get('/', (req, res) => {
-    // console.log(content)
-    res.render('home' )
-    // console.log('App is running on port ')
-})
+// app.use('/', viewsRouter)
 
 
+// app.get('/', (req, res) => {
+//     res.render('home')
+// })
 
 app.listen(PORT, () => {
-    console.log(`App is running on http://localhost:${PORT}`)
+    console.log(`App is listening on http://localhost:${PORT}`)
 })

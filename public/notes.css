@@ -191,6 +191,8 @@ input:active{
     flex-wrap: wrap;
     row-gap: 1rem;
 }
+
+
 .card{
     width: 200px;
     border: 1px solid gray;
@@ -199,4 +201,9 @@ input:active{
     border-radius: 15px;
     box-shadow: 2px 2px 50%;
     margin: 0 auto;
+}
+
+.footer{
+  
+  display: none;
 }

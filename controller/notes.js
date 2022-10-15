@@ -42,7 +42,7 @@ async function updateNote(req, res){
         const note = await NoteModel.findByIdAndUpdate(noteId, noteInfo)
         res.status(200).json({
             message: 'Update successful',
-            data: note
+            // data: note
         })
     }
     catch(error){
